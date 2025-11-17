@@ -4,8 +4,8 @@ import { GraphQLModule } from "@nestjs/graphql";
 import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
 import { ConfigModule } from "@nestjs/config";
-import { UsersModule } from "./users/users.module";
 import path from "path";
+import { PrismaModule } from "./common/prisma/prisma.module";
 
 @Module({
 	imports: [
@@ -19,7 +19,7 @@ import path from "path";
 				numberScalarMode: "integer",
 			},
 		}),
-		UsersModule,
+		PrismaModule,
 	],
 	controllers: [AppController],
 	providers: [AppService],

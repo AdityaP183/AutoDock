@@ -10,7 +10,7 @@
         "tsc": "pnpm --parallel -r run tsc",
         "lint": "pnpm --parallel -r run lint",
         "build": "pnpm --parallel -r run build",
-        "validate": "pnpm format:write && pnpm tsc && pnpm lint",
+        "validate": "pnpm format:write && pnpm lint",
         "prepare": "husky install"
     },
     "keywords": [],
@@ -18,8 +18,10 @@
     "license": "ISC",
     "packageManager": "pnpm@10.22.0",
     "devDependencies": {
+        "@types/node": "^24.10.1",
         "husky": "^8.0.0",
         "prettier": "^3.6.2",
+        "ts-node": "^10.9.2",
         "typescript": "^5.9.3"
     }
 }

@@ -1,3 +1,6 @@
 packages:
-  - 'apps/*'
-  - 'libs/*'
+  - apps/*
+  - libs/*
+
+overrides:
+  ts-node: link:C:/Users/ADITYA/AppData/Local/pnpm/global/5/node_modules/ts-node
