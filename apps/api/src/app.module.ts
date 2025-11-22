@@ -13,7 +13,7 @@ import { UserModule } from "./users/users.module";
 		GraphQLModule.forRoot<ApolloDriverConfig>({
 			driver: ApolloDriver,
 			introspection: true,
-			playground: true,
+			playground: false,
 			fieldResolverEnhancers: ["guards"],
 			autoSchemaFile: join(process.cwd(), "src/schema.gql"),
 		}),
