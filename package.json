@@ -3,9 +3,25 @@
     "version": "1.0.0",
     "description": "",
     "private": true,
-    "scripts": {},
+    "scripts": {
+        "format": "prettier  \"{apps,libs}/**/*.{ts,tsx,js,json}\" --ignore-path .gitignore",
+        "format:check": "pnpm format --check",
+        "format:write": "pnpm format --write",
+        "tsc": "pnpm --parallel -r run tsc",
+        "lint": "pnpm --parallel -r run lint",
+        "build": "pnpm --parallel -r run build",
+        "validate": "pnpm format:write && pnpm lint",
+        "prepare": "husky install"
+    },
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "packageManager": "pnpm@10.23.0"
+    "packageManager": "pnpm@10.23.0",
+    "devDependencies": {
+        "@types/node": "^24.10.1",
+        "husky": "^8.0.0",
+        "prettier": "^3.6.2",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.9.3"
+    }
 }
