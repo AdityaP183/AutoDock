@@ -25,6 +25,11 @@
         "ts-node": "^10.9.2",
         "typescript": "^5.9.3"
     },
+    "eslintIgnore": [
+        "**/node_modules/**",
+        "**/dist/**",
+        "**/.next/**"
+    ],
     "lint-staged": {
         "*.{ts,tsx,js,json}": [
             "prettier --write",
